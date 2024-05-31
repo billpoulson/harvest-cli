@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "harvest-cli"
+version = "0.1.0"
+description = "A CLI tool for developers using Harvest Time Tracking" # Add your project description here
+authors = ["Bill Poulson <poulson.bill@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "src", from = "" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+click = "^8.1.7"
+inquirer = "^3.2.4"
+flask = "^3.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+pytest-watch = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+python_classes = ["Test", "Describe"]
+python_functions = ["test_", "it_", "and_", "but_", "they_"]
+python_files = ["test_*.py"]
+testpaths = ["tests"]
+
+
+# pytest = "^6.2"       # Ensure pytest is listed if it's not already
+# pytest-watch = "^4.2"

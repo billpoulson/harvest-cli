@@ -89,6 +89,26 @@ harvest track
 
 ```
 
+## Testing
+
+### Dependencies
+
+```bash {"id":"01HZ6FAF2QTJ4KZMV79RK70VBG"}
+(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+poetry --version
+pip install pytest-watch
+
+```
+
+```bash {"id":"01HZ6FHPBJSGEPA2MN8W49JFTB"}
+[System.Environment]::SetEnvironmentVariable("Path", $env:Path + $env:APPDATA\Python\Scripts", [System.EnvironmentVariableTarget]::User)
+
+```
+
+```bash {"id":"01HZ6F95V5NNWADQCEGSN9ASH1"}
+ptw
+```
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file
